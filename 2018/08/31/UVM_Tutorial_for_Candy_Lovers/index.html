@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="AMBA,">
+  <meta name="keywords" content="UVM,">
 
 
 
@@ -86,23 +86,22 @@
 
 
 
-<meta name="description" content="此系列为移知相关课程学习总结。 本节先列出相关协议的专业术语，作为进入到AMBA协议细节之前的一些准备。  1. 什么是slave interface？ 我们通常说AXI是点对点的协议，slave interface是slave上的接口，用来连接对应master上的master interface。 2.	什么是master interface？ 我们通常说AXI是点对点的协议，master i">
-<meta name="keywords" content="AMBA">
+<meta name="description" content="这是一个有趣的UVM教程，名叫“糖果爱好者的UVM教程”，该教程中没有AXI，OCP等硬件总线，它是完成了一个所谓的“糖豆生成器（jelly-bean generator）”的TB，这个TB会用约束随机的方式生成不同口味的糖豆，系统会评估口味的可口度，是通过一个比较“纯软件”的方式了解UVM的工作方式和机理。   原网址 http://cluelogic.com/   源码地址 https://g">
+<meta name="keywords" content="UVM">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AMBA学习笔记～基本概念">
-<meta property="og:url" content="http://www.syq.wiki/2018/08/12/AMBA_start/index.html">
+<meta property="og:title" content="UVM Tutorial for Candy Lovers">
+<meta property="og:url" content="http://www.syq.wiki/2018/08/31/UVM_Tutorial_for_Candy_Lovers/index.html">
 <meta property="og:site_name" content="ICer 杂记">
-<meta property="og:description" content="此系列为移知相关课程学习总结。 本节先列出相关协议的专业术语，作为进入到AMBA协议细节之前的一些准备。  1. 什么是slave interface？ 我们通常说AXI是点对点的协议，slave interface是slave上的接口，用来连接对应master上的master interface。 2.	什么是master interface？ 我们通常说AXI是点对点的协议，master i">
+<meta property="og:description" content="这是一个有趣的UVM教程，名叫“糖果爱好者的UVM教程”，该教程中没有AXI，OCP等硬件总线，它是完成了一个所谓的“糖豆生成器（jelly-bean generator）”的TB，这个TB会用约束随机的方式生成不同口味的糖豆，系统会评估口味的可口度，是通过一个比较“纯软件”的方式了解UVM的工作方式和机理。   原网址 http://cluelogic.com/   源码地址 https://g">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://p5mgt22l9.bkt.clouddn.com/mem_type.png">
-<meta property="og:image" content="http://p5mgt22l9.bkt.clouddn.com/secure.png">
-<meta property="og:image" content="http://p5mgt22l9.bkt.clouddn.com/cache.png">
-<meta property="og:image" content="http://p5mgt22l9.bkt.clouddn.com/cache2.png">
-<meta property="og:updated_time" content="2018-08-30T14:00:26.000Z">
+<meta property="og:image" content="http://p5mgt22l9.bkt.clouddn.com/uvm_jb_env.png">
+<meta property="og:image" content="http://p5mgt22l9.bkt.clouddn.com/uvm_jb_comp.png">
+<meta property="og:image" content="http://p5mgt22l9.bkt.clouddn.com/uvm_jb_obj.png">
+<meta property="og:updated_time" content="2018-09-01T05:23:10.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AMBA学习笔记～基本概念">
-<meta name="twitter:description" content="此系列为移知相关课程学习总结。 本节先列出相关协议的专业术语，作为进入到AMBA协议细节之前的一些准备。  1. 什么是slave interface？ 我们通常说AXI是点对点的协议，slave interface是slave上的接口，用来连接对应master上的master interface。 2.	什么是master interface？ 我们通常说AXI是点对点的协议，master i">
-<meta name="twitter:image" content="http://p5mgt22l9.bkt.clouddn.com/mem_type.png">
+<meta name="twitter:title" content="UVM Tutorial for Candy Lovers">
+<meta name="twitter:description" content="这是一个有趣的UVM教程，名叫“糖果爱好者的UVM教程”，该教程中没有AXI，OCP等硬件总线，它是完成了一个所谓的“糖豆生成器（jelly-bean generator）”的TB，这个TB会用约束随机的方式生成不同口味的糖豆，系统会评估口味的可口度，是通过一个比较“纯软件”的方式了解UVM的工作方式和机理。   原网址 http://cluelogic.com/   源码地址 https://g">
+<meta name="twitter:image" content="http://p5mgt22l9.bkt.clouddn.com/uvm_jb_env.png">
 
 
 
@@ -136,7 +135,7 @@
 
 
 
-  <title>AMBA学习笔记～基本概念 | ICer 杂记</title>
+  <title>UVM Tutorial for Candy Lovers | ICer 杂记</title>
   
 
 
@@ -315,7 +314,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.syq.wiki/2018/08/12/AMBA_start/">
+    <link itemprop="mainEntityOfPage" href="http://www.syq.wiki/2018/08/31/UVM_Tutorial_for_Candy_Lovers/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sangrealf">
@@ -332,7 +331,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">AMBA学习笔记～基本概念</h1>
+          <h1 class="post-title" itemprop="name headline">UVM Tutorial for Candy Lovers</h1>
         
 
         <div class="post-meta">
@@ -344,8 +343,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-12T10:15:45+08:00">
-                2018-08-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-31T10:15:45+08:00">
+                2018-08-31
               </time>
             
 
@@ -403,7 +402,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.6k 字
+                  1.2k 字
                 </span>
               
 
@@ -419,7 +418,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  6 分钟
+                  5 分钟
                 </span>
               
             </div>
@@ -440,85 +439,50 @@
       
 
       
-        <hr>
-<p>此系列为移知相关课程学习总结。
-本节先列出相关协议的专业术语，作为进入到AMBA协议细节之前的一些准备。</p>
-<hr>
-<h2 id="1-什么是slave-interface？">1. 什么是slave interface？</h2>
-<p>我们通常说AXI是点对点的协议，slave interface是slave上的接口，用来连接对应master上的master interface。</p>
-<h2 id="2-什么是master-interface？">2.	什么是master interface？</h2>
-<p>我们通常说AXI是点对点的协议，master interface是master上的接口，用来连接对应slave上的slave interface。</p>
-<h2 id="3-什么是transaction和transfer？">3.	什么是transaction和transfer？</h2>
-<p>transaction是包含整个burst的传输，它包含地址传输，数据传输，以及响应。而transfer指的但是单个信息传输，它可以一个地址传输，一个数据传输等等。</p>
-<h2 id="4-什么是bus-matrix和bus-interconnection？">4.	什么是bus matrix和bus interconnection？</h2>
-<p>bus matrix和bus interconnection都是用来连接bus的master和slave， 本质是一样的，只是叫法不同而已。</p>
-<h2 id="5-什么是burst？">5.	什么是burst？</h2>
-<p>在AXI协议中，是transaction的单位，一个transaction是以一个burst为单位的传输的，一个burst可以包含多个transfer。</p>
-<h2 id="6-什么是outstanding-transaction？">6.	什么是outstanding transaction？</h2>
-<p>指一个transaction已经发出，但是还没有得到response。</p>
-<h2 id="7-什么是read-write-issue-capability？">7.	什么是read/write issue capability？</h2>
-<p>指某个cpu/master可以发出最大数目的read/write outstanding transaction数目。</p>
-<hr>
-<h1>Memory type</h1>
-<p><img src="http://p5mgt22l9.bkt.clouddn.com/mem_type.png" alt=""></p>
-<h2 id="normal-memory">Normal memory</h2>
-<p>普通的数据存储空间，对系统没有影响，数据可以cacheable和bufferable，如一般的RAM或ROM。
-对该类型，Master发送数据到bus interconnect即可接受response返回，bus interconnect可以merge数据后再发往Slave。</p>
-<h2 id="device-memory">Device memory</h2>
-<p>对系统有一定影响，Master需要保证数据正确读写到相应的地址空间，故为Non-cacheable，但对写操作可以接受写入延迟，故可以支持bufferable，如一般外设寄存器（如flash controller写数据寄存器）或对读写敏感的memory。
-对该类型，Master发送数据到bus interconnect即可接受response返回，bus interconnect随即再发送数据到Slave。</p>
-<h2 id="strongly-ordered-memory">Strongly-ordered memory</h2>
-<p>对系统有一定影响，Master需要保证数据正确读写到相应的地址空间且即时生效，故为Non-cacheable和Non-bufferable，如一般需要马上生效的寄存器（如clk ctrl寄存器）或对读写敏感的memory。
-对该类型，Master发送数据到bus interconnect再到Slave，直到Slave发回response到bus interconnect再到Master，该笔传输才算完成。</p>
-<p>这些memory的访问属性，cacheable和bufferable，AHB和AXI协议都有相应的信号表示，见后续章节。</p>
-<hr>
-<h1>Secure &amp; Non-Secure</h1>
-<p><img src="http://p5mgt22l9.bkt.clouddn.com/secure.png" alt=""></p>
-<h2 id="trustzone">TrustZone</h2>
-<p>ARM针对消费电子设备设计的一种硬件架构，其目的是为消费电子产品构建一个安全框架来抵御各种可能的攻击。</p>
-<p>TrustZone在概念上将SoC的硬件和软件资源划分为安全(Secure World)和非安全(Normal World)两个世界，所有需要保密的操作在安全世界执行（如指纹识别、密码处理、数据加解密、安全认证等），其余操作在非安全世界执行（如用户操作系统、各种应用程序等），安全世界和非安全世界通过一个名为Monitor Mode的模式进行转换。</p>
-<p>设计上，TrustZone并不是采用一刀切的方式让每个芯片厂家都使用同样的实现。总体上以AMBA3 AXI总线为基础，针对不同的应用场景设计了各种安全组件，芯片厂商根据具体的安全需求，选择不同的安全组件来构建其TrustZone实现。</p>
-<p>其中主要的组件有：</p>
-<h3 id="必选组件">必选组件</h3>
+        <p>这是一个有趣的UVM教程，名叫“糖果爱好者的UVM教程”，该教程中没有AXI，OCP等硬件总线，它是完成了一个所谓的“糖豆生成器（jelly-bean generator）”的TB，这个TB会用约束随机的方式生成不同口味的糖豆，系统会评估口味的可口度，是通过一个比较“纯软件”的方式了解UVM的工作方式和机理。</p>
 <ul>
 <li>
-<p>AMBA3(AMBA3
-Advanced eXtensble Interface) AXI总线，安全机制的基础设施
-AMBA3 AXI系统总线作为TrustZone的基础架构设施，提供了安全世界和非安全世界的隔离机制，确保非安全核只能访问非安全世界的系统资源，而安全核能访问所有资源，因此安全世界的资源不会被非安全世界（或普通世界）所访问</p>
+<p>原网址 <a href="http://cluelogic.com/" target="_blank" rel="noopener">http://cluelogic.com/</a></p>
 </li>
 <li>
-<p>虚拟化的ARM Core，虚拟安全和非安全核
-TZPC (TrustZone Protection Controller)，根据需要控制外设的安全特性
-TZASC (TrustZone Address Space Controller)，对内存进行安全和非安全区域划分和保护</p>
+<p>源码地址 <a href="https://github.com/cluelogic/uvm-tutorial-for-candy-lovers" target="_blank" rel="noopener">https://github.com/cluelogic/uvm-tutorial-for-candy-lovers</a></p>
 </li>
 </ul>
-<h3 id="可选组件">可选组件</h3>
-<ul>
-<li>TZMA (TrustZone Memory Adapter)，片上ROM或RAM安全区域和非安全区域的划分和保护</li>
-<li>AXI-to-APB bridge，桥接APB总线，配合TZPC使APB总线外设支持TrustZone安全特性</li>
-<li>除了以上列出的组件外，还有诸如 Level 2 Cache Controller, DMA Controller, Generic Interrupt Controller等</li>
-</ul>
-<p>逻辑上，安全世界中，安全系统的OS提供统一的服务，针对不同的安全需求加载不同的安全应用TA(Trusted Application)。 例如：针对某具体DRM的TA，针对DTCP-IP的TA，针对HDCP 2.0验证的TA等。</p>
 <hr>
-<h1>Cache</h1>
-<p>Cache一般使用SRAM制造，它与CPU之间交换数据的速度高于DRAM，所以被称作“高速缓存”。由于CPU的信息处理速度常常超过其它部件的信息传递速度，所以使用一般的DRAM来作为信息存储器常常使CPU处于等待状态，造成资源的浪费。Cache就是为了解决这个问题而诞生的。在操作系统启动以后，CPU就把DRAM中经常被调用的一些系统信息暂时储存在Cache里面，以后当CPU需要调用这些信息时，首先到Cache里去找，如果找到了，就直接从Cache里读取，这样利用Cache的高速性能就可以节省很多时间。大多数CPU在自身中集成了一定量的Cache，一般被称作“Level1 Cache”或“Inner Cache”，这部分存储器与CPU的信息交换速度是最快的，但容量较小。CPU外的系统中一般也集成了Cache，称作“Level2 Cache”或“Outer Cache”，比Inner Cache容量大些，相应的速度也会慢些。</p>
-<h2 id="cache结构">Cache结构</h2>
-<p><img src="http://p5mgt22l9.bkt.clouddn.com/cache.png" alt=""></p>
-<ul>
-<li>Line：Cache存储的基本单位，size一般是2的幂，如4或8 word</li>
-<li>Way：一组Line的集合</li>
-<li>Set：每一Way上的同一Line</li>
-<li>Tag：用于标记数据存储的Cache Line位置的地址</li>
-<li>Index：用于标记选哪一路Set的地址</li>
-</ul>
-<p><img src="http://p5mgt22l9.bkt.clouddn.com/cache2.png" alt=""></p>
-<h2 id="cache-分类">Cache 分类</h2>
-<p>根据Cache的index和tag来源，可以把cache分为很多种类：</p>
-<ul>
-<li>VIVT： Virtual Index Virtual Tag，顾名思义，索引Cache时的Index来自Virtual Address（虚拟地址），Tag同样也来自虚拟地址</li>
-<li>VIPT： Virtual Index Physical Tag，顾名思义，索引Cache时的Index来自Virtual Address（虚拟地址），Tag来自Physical Address（物理地址），通常用于Instruction cache</li>
-<li>PIPT： Physical Index Physical Tag，顾名思义，索引Cache时的Index和Tag 都来自Physical Address（物理地址），通常用于Data cache</li>
-</ul>
+<h2 id="概述">概述</h2>
+<h3 id="该tb的验证组件如下">该TB的验证组件如下</h3>
+<p><img src="http://p5mgt22l9.bkt.clouddn.com/uvm_jb_env.png" alt="1"></p>
+<p>其中jelly_bean_taster为DUT。jelly_bean_sequencer会产生糖豆配方并将其发送至jelly_bean_driver。driver通过sequencer提供的配方中的信息生成糖豆，并通过接口jelly_bean_if将其送往DUT，DUT将会检测糖豆的口味。与之并行的，当糖豆生成时，jelly_bean_monitor将会捕获其口味和颜色，这些信息将送往糖豆功能覆盖率收集器jelly_bean_fc_subscriber，该收集器会记录所有糖豆的颜色和口味。同时，jelly_bean_scoreboard也会从monitor获取信息以检测DUT jelly_bean_taster的响应是否正确。</p>
+<h3 id="该tb验证组件的类图如下">该TB验证组件的类图如下</h3>
+<p><img src="http://p5mgt22l9.bkt.clouddn.com/uvm_jb_comp.png" alt="2"></p>
+<p>浅蓝色部分表示UVM的基类库，深色部分表示本教程创建的新类。</p>
+<hr>
+<h2 id="配方">配方</h2>
+<p>糖豆的配方作为transaction从jelly_bean_sequencer发往jelly_bean_driver，同时也从jelly_bean_monitor发往各个收集器，该transaction类型为jelly_bean_transaction，它基于颜色，口味等属性定义了一个糖豆。</p>
+<p>jelly_bean_sequencer不仅定义单个糖豆的配方，它还可以定义类似口味的多个糖豆（a sequence of transactions），和多种口味糖豆的集合（a sequence of sequences）等。</p>
+<p>transaction和sequence的类图如下，颜色示例同上节。</p>
+<p><img src="http://p5mgt22l9.bkt.clouddn.com/uvm_jb_obj.png" alt="3"></p>
+<hr>
+<h2 id="transaction-和-sequence">Transaction 和 Sequence</h2>
+<p>本节将基于System Verilog代码展开，请参考前两节的类图。</p>
+<h3 id="transaction">Transaction</h3>
+<h4 id="jelly-bean-transaction">Jelly_Bean Transaction</h4>
+<p>jelly_bean_transaction类基于口味和颜色等属性定义糖豆配方，该类还有一个taste属性用以保持DUT对口味的响应。口味和颜色的关系在约束块中定义（12行），譬如，如果糖豆口味为苹果味，其颜色必须是红色或绿色（不能是蓝色）。</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> jelly_bean_transaction <span class="keyword">extends</span> uvm_sequence_item;</span><br><span class="line">    <span class="keyword">typedef</span> <span class="keyword">enum</span> <span class="keyword">bit</span>[<span class="number">2</span>:<span class="number">0</span>] &#123; NO_FLAVOR, APPLE, BLUEBERRY, BUBBLE_GUM, CHOCOLATE &#125; flavor_e;</span><br><span class="line">    <span class="keyword">typedef</span> <span class="keyword">enum</span> <span class="keyword">bit</span>[<span class="number">1</span>:<span class="number">0</span>] &#123; RED, GREEN, BLUE &#125; color_e;</span><br><span class="line">    <span class="keyword">typedef</span> <span class="keyword">enum</span> <span class="keyword">bit</span>[<span class="number">1</span>:<span class="number">0</span>] &#123; UNKNOWN, YUMMY, YUCKY &#125; taste_e;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">rand</span> flavor_e flavor;</span><br><span class="line">    <span class="keyword">rand</span> color_e  color;</span><br><span class="line">    <span class="keyword">rand</span> <span class="keyword">bit</span>      sugar_free;</span><br><span class="line">    <span class="keyword">rand</span> <span class="keyword">bit</span>      sour;</span><br><span class="line">    taste_e       taste;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">constraint</span> flavor_color_con &#123;</span><br><span class="line">        flavor != NO_FLAVOR;</span><br><span class="line">        flavor == APPLE     -&gt; color != BLUE;</span><br><span class="line">        flavor == BLUEBERRY -&gt; color == BLUE;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">function</span> <span class="keyword">new</span>(<span class="keyword">string</span> name = <span class="string">""</span>);</span><br><span class="line">        <span class="keyword">super</span><span class="variable">.new</span>(name);</span><br><span class="line">    <span class="keyword">endfunction</span>: <span class="keyword">new</span></span><br><span class="line">    </span><br><span class="line">    <span class="meta">`uvm_object_utils_begin(jelly_bean_transaction)</span></span><br><span class="line">        <span class="meta">`uvm_field_enum(flavor_e, flavor, UVM_ALL_ON)</span></span><br><span class="line">        <span class="meta">`uvm_field_enum(color_e, color, UVM_ALL_ON)</span></span><br><span class="line">        <span class="meta">`uvm_field_int(sugar_free, UVM_ALL_ON)</span></span><br><span class="line">        <span class="meta">`uvm_field_int(sour, UVM_ALL_ON)</span></span><br><span class="line">        <span class="meta">`uvm_field_enum(taste_e, taste, UVM_ALL_ON)</span></span><br><span class="line">    <span class="meta">`uvm_object_utils_end</span></span><br><span class="line"><span class="keyword">endclass</span>: jelly_bean_transaction</span><br></pre></td></tr></table></figure>
+<p>作者建议熟悉UVM后，可以自己写‘do-hook'函数取代23到27行的UVM field宏。</p>
+<h4 id="sugar-free-jelly-bean">Sugar-Free Jelly Bean</h4>
+<p>jelly_bean_transaction类可以被继承生成各种子类，譬如创建一个无糖的糖豆（sugar free jelly bean），可以用以下的约束定义（第4行）。</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> sugar_free_jelly_bean_transaction <span class="keyword">extends</span> jelly_bean_transaction;</span><br><span class="line">    <span class="meta">`uvm_object_utils(sugar_free_jelly_bean_transaction)</span></span><br><span class="line"> </span><br><span class="line">    <span class="keyword">constraint</span> sugar_free_con &#123;</span><br><span class="line">        sugar_free == <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">function</span> <span class="keyword">new</span>(<span class="keyword">string</span> name = <span class="string">""</span>);</span><br><span class="line">        <span class="keyword">super</span><span class="variable">.new</span>(name);</span><br><span class="line">    <span class="keyword">endfunction</span>: <span class="keyword">new</span></span><br><span class="line"><span class="keyword">endclass</span>: sugar_free_jelly_bean_transaction</span><br></pre></td></tr></table></figure>
+<h3 id="sequences">Sequences</h3>
+<h4 id="one-jelly-bean">One Jelly Bean</h4>
+<p>Sequence创建一个生成糖豆的配方，第一个sequence最简单，它仅仅生成一个糖豆，第10行创建了一个配方，第12行再对其随机化。</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> one_jelly_bean_sequence <span class="keyword">extends</span> uvm_sequence<span class="variable">#(jelly_bean_transaction)</span>;</span><br><span class="line">    <span class="meta">`uvm_object_utils(one_jelly_bean_sequence)</span></span><br><span class="line"> </span><br><span class="line">    <span class="keyword">function</span> <span class="keyword">new</span>(<span class="keyword">string</span> name = <span class="string">""</span>);</span><br><span class="line">        <span class="keyword">super</span><span class="variable">.new</span>(name);</span><br><span class="line">    <span class="keyword">endfunction</span>: <span class="keyword">new</span></span><br><span class="line"> </span><br><span class="line">    <span class="keyword">task</span> body();</span><br><span class="line">        jelly_bean_transaction jb_tx;</span><br><span class="line">        jb_tx = jelly_bean_transaction::type_id::create(<span class="variable">.name</span>(<span class="string">"jb_tx"</span>), <span class="variable">.contxt</span>(get_full_name()));</span><br><span class="line">        start_item(jb_tx);</span><br><span class="line">        <span class="keyword">assert</span>(jb_tx<span class="variable">.randomize</span>());</span><br><span class="line">        finish_item(jb_tx);</span><br><span class="line">    <span class="keyword">endtask</span>: body</span><br><span class="line"><span class="keyword">endclass</span>: one_jelly_bean_sequence</span><br></pre></td></tr></table></figure>
+<h4 id="same-flavored-jelly-beans-sequence-of-transactions">Same-Flavored Jelly Beans (Sequence of Transactions)</h4>
+<p>现在让我们创建一个新的sequence，它的配方可以生成有相同口味的多个糖豆，这里增加了一个表示糖豆数量的类属性num_jelly_beans。第4行约束了糖豆的数量在2到4之间。第14行创建了单个糖豆，第15行对其颜色和口味进行随机化。以这个糖豆作为标准，第18行创建了num_jelly_beans个有相同口味的糖豆。21行的in-line constranit约束保证产生的糖豆是相同口味。</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> same_flavored_jelly_beans_sequence <span class="keyword">extends</span> uvm_sequence<span class="variable">#(jelly_bean_transaction)</span>;</span><br><span class="line">    <span class="keyword">rand</span> <span class="keyword">int</span> <span class="keyword">unsigned</span> num_jelly_beans; <span class="comment">// knob</span></span><br><span class="line"> </span><br><span class="line">    <span class="keyword">constraint</span> num_jelly_beans_con &#123; num_jelly_beans <span class="keyword">inside</span> &#123; [<span class="number">2</span>:<span class="number">4</span>] &#125;; &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">function</span> <span class="keyword">new</span>(<span class="keyword">string</span> name = <span class="string">""</span>);</span><br><span class="line">        <span class="keyword">super</span><span class="variable">.new</span>(name);</span><br><span class="line">    <span class="keyword">endfunction</span>: <span class="keyword">new</span></span><br><span class="line"> </span><br><span class="line">    <span class="keyword">task</span> body();</span><br><span class="line">        jelly_bean_transaction           jb_tx;</span><br><span class="line">        jelly_bean_transaction::flavor_e jb_flavor;</span><br><span class="line"> </span><br><span class="line">        jb_tx = jelly_bean_transaction::type_id::create(<span class="variable">.name</span>(<span class="string">"jb_tx"</span>), <span class="variable">.contxt</span>(get_full_name()));</span><br><span class="line">        <span class="keyword">assert</span>(jb_tx<span class="variable">.randomize</span>());</span><br><span class="line">        jb_flavor = jb_tx<span class="variable">.flavor</span>;</span><br><span class="line"> </span><br><span class="line">        <span class="keyword">repeat</span> (num_jelly_beans) <span class="keyword">begin</span></span><br><span class="line">            jb_tx = jelly_bean_transaction::type_id::create(<span class="variable">.name</span>(<span class="string">"jb_tx"</span>), <span class="variable">.contxt</span>(get_full_name()));</span><br><span class="line">            start_item(jb_tx);</span><br><span class="line">            <span class="keyword">assert</span>(jb_tx<span class="variable">.randomize</span>() <span class="keyword">with</span> &#123; jb_tx<span class="variable">.flavor</span> == jb_flavor; &#125;);</span><br><span class="line">            finish_item(jb_tx);</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">endtask</span>: body</span><br><span class="line"> </span><br><span class="line">    <span class="meta">`uvm_object_utils_begin(same_flavored_jelly_beans_sequence)</span></span><br><span class="line">        <span class="meta">`uvm_field_int(num_jelly_beans, UVM_ALL_ON)</span></span><br><span class="line">    <span class="meta">`uvm_object_utils_end</span></span><br><span class="line"><span class="keyword">endclass</span>: same_flavored_jelly_beans_sequence</span><br></pre></td></tr></table></figure>
+<h4 id="gift-boxed-jelly-beans-sequence-of-sequences">Gift-Boxed Jelly Beans (Sequence of Sequences)</h4>
+<p>下边的code创建了一些有不同口味的糖豆。口味数量定义为新的类属性num_jelly_bean_flavors，在第4行该sequence随机选取2或3种口味。该sequence的主体在repeat部分（第12行起），一系列same_flavored_jelly_beans_sequences的sequence被创建。</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> gift_boxed_jelly_beans_sequence <span class="keyword">extends</span> uvm_sequence<span class="variable">#(jelly_bean_transaction)</span>;</span><br><span class="line">    <span class="keyword">rand</span> <span class="keyword">int</span> <span class="keyword">unsigned</span> num_jelly_bean_flavors; <span class="comment">// knob</span></span><br><span class="line"> </span><br><span class="line">    <span class="keyword">constraint</span> num_jelly_bean_flavors_con &#123; num_jelly_bean_flavors <span class="keyword">inside</span> &#123; [<span class="number">2</span>:<span class="number">3</span>] &#125;; &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">function</span> <span class="keyword">new</span>(<span class="keyword">string</span> name = <span class="string">""</span>);</span><br><span class="line">        <span class="keyword">super</span><span class="variable">.new</span>(name);</span><br><span class="line">    <span class="keyword">endfunction</span>: <span class="keyword">new</span></span><br><span class="line"> </span><br><span class="line">    <span class="keyword">task</span> body();</span><br><span class="line">        same_flavored_jelly_beans_sequence jb_seq;</span><br><span class="line">        <span class="keyword">repeat</span> (num_jelly_bean_flavors) <span class="keyword">begin</span></span><br><span class="line">            jb_seq = same_flavored_jelly_beans_sequence::type_id::create(<span class="variable">.name</span>(<span class="string">"jb_seq"</span>), <span class="variable">.contxt</span>(get_full_name()));</span><br><span class="line">            <span class="keyword">assert</span>(jb_seq<span class="variable">.randomize</span>());</span><br><span class="line">            jb_seq<span class="variable">.start</span>(<span class="variable">.sequencer</span>(m_sequencer), <span class="variable">.parent_sequence</span>(<span class="keyword">this</span>));</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">endtask</span>: body</span><br><span class="line"> </span><br><span class="line">    <span class="meta">`uvm_object_utils_begin(gift_boxed_jelly_beans_sequence)</span></span><br><span class="line">        <span class="meta">`uvm_field_int(num_jelly_bean_flavors, UVM_ALL_ON)</span></span><br><span class="line">    <span class="meta">`uvm_object_utils_end</span></span><br><span class="line"><span class="keyword">endclass</span>: gift_boxed_jelly_beans_sequence</span><br></pre></td></tr></table></figure>
 <hr>
 
       
@@ -569,7 +533,7 @@ TZASC (TrustZone Address Space Controller)，对内存进行安全和非安全�
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://www.syq.wiki/2018/08/12/AMBA_start/" title="AMBA学习笔记～基本概念">http://www.syq.wiki/2018/08/12/AMBA_start/</a>
+    <a href="http://www.syq.wiki/2018/08/31/UVM_Tutorial_for_Candy_Lovers/" title="UVM Tutorial for Candy Lovers">http://www.syq.wiki/2018/08/31/UVM_Tutorial_for_Candy_Lovers/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -584,7 +548,7 @@ TZASC (TrustZone Address Space Controller)，对内存进行安全和非安全�
       
         <div class="post-tags">
           
-            <a href="/tags/AMBA/" rel="tag"># AMBA</a>
+            <a href="/tags/UVM/" rel="tag"># UVM</a>
           
         </div>
       
@@ -597,8 +561,8 @@ TZASC (TrustZone Address Space Controller)，对内存进行安全和非安全�
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/18/SV-Syntax-Summary/" rel="next" title="SV Syntax Summary">
-                <i class="fa fa-chevron-left"></i> SV Syntax Summary
+              <a href="/2018/08/12/AMBA_start/" rel="next" title="AMBA学习笔记～基本概念">
+                <i class="fa fa-chevron-left"></i> AMBA学习笔记～基本概念
               </a>
             
           </div>
@@ -607,8 +571,8 @@ TZASC (TrustZone Address Space Controller)，对内存进行安全和非安全�
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/08/31/UVM_Tutorial_for_Candy_Lovers/" rel="prev" title="UVM Tutorial for Candy Lovers">
-                UVM Tutorial for Candy Lovers <i class="fa fa-chevron-right"></i>
+              <a href="/2018/10/21/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -770,7 +734,7 @@ TZASC (TrustZone Address Space Controller)，对内存进行安全和非安全�
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-什么是slave-interface？"><span class="nav-number">1.</span> <span class="nav-text">1. 什么是slave interface？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-什么是master-interface？"><span class="nav-number">2.</span> <span class="nav-text">2.	什么是master interface？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-什么是transaction和transfer？"><span class="nav-number">3.</span> <span class="nav-text">3.	什么是transaction和transfer？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-什么是bus-matrix和bus-interconnection？"><span class="nav-number">4.</span> <span class="nav-text">4.	什么是bus matrix和bus interconnection？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-什么是burst？"><span class="nav-number">5.</span> <span class="nav-text">5.	什么是burst？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-什么是outstanding-transaction？"><span class="nav-number">6.</span> <span class="nav-text">6.	什么是outstanding transaction？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-什么是read-write-issue-capability？"><span class="nav-number">7.</span> <span class="nav-text">7.	什么是read/write issue capability？</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number"></span> <span class="nav-text">Memory type</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#normal-memory"><span class="nav-number">1.</span> <span class="nav-text">Normal memory</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#device-memory"><span class="nav-number">2.</span> <span class="nav-text">Device memory</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#strongly-ordered-memory"><span class="nav-number">3.</span> <span class="nav-text">Strongly-ordered memory</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number"></span> <span class="nav-text">Secure &amp; Non-Secure</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#trustzone"><span class="nav-number">1.</span> <span class="nav-text">TrustZone</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#必选组件"><span class="nav-number">1.1.</span> <span class="nav-text">必选组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#可选组件"><span class="nav-number">1.2.</span> <span class="nav-text">可选组件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number"></span> <span class="nav-text">Cache</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#cache结构"><span class="nav-number">1.</span> <span class="nav-text">Cache结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cache-分类"><span class="nav-number">2.</span> <span class="nav-text">Cache 分类</span></a></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#该tb的验证组件如下"><span class="nav-number">1.1.</span> <span class="nav-text">该TB的验证组件如下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#该tb验证组件的类图如下"><span class="nav-number">1.2.</span> <span class="nav-text">该TB验证组件的类图如下</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配方"><span class="nav-number">2.</span> <span class="nav-text">配方</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#transaction-和-sequence"><span class="nav-number">3.</span> <span class="nav-text">Transaction 和 Sequence</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#transaction"><span class="nav-number">3.1.</span> <span class="nav-text">Transaction</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#jelly-bean-transaction"><span class="nav-number">3.1.1.</span> <span class="nav-text">Jelly_Bean Transaction</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sugar-free-jelly-bean"><span class="nav-number">3.1.2.</span> <span class="nav-text">Sugar-Free Jelly Bean</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sequences"><span class="nav-number">3.2.</span> <span class="nav-text">Sequences</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#one-jelly-bean"><span class="nav-number">3.2.1.</span> <span class="nav-text">One Jelly Bean</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#same-flavored-jelly-beans-sequence-of-transactions"><span class="nav-number">3.2.2.</span> <span class="nav-text">Same-Flavored Jelly Beans (Sequence of Transactions)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#gift-boxed-jelly-beans-sequence-of-sequences"><span class="nav-number">3.2.3.</span> <span class="nav-text">Gift-Boxed Jelly Beans (Sequence of Sequences)</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
